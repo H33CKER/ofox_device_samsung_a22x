@@ -20,6 +20,22 @@ on boot
     setprop ro.boot.vbmeta.avb_version 1.1
     setprop ro.boot.avb_version 1.1
 
+#erayrafet
+    write /proc/ppm/policy/ut_fix_core_num "4 4"
+    write /proc/ppm/policy/ut_fix_freq_idx "0 0"
+    write /proc/perfmgr/boost_ctrl/cpu_ctrl/boot_freq "0 0 0 0"
+    write /sys/devices/platform/boot_dramboost/dramboost/dramboost 1
+    write /sys/module/mmdvfs_pmqos/parameters/force_step 0
+    write /proc/perfmgr/boost_ctrl/eas_ctrl/boot_boost "0 100"
+    write /proc/perfmgr/boost_ctrl/eas_ctrl/boot_boost "1 100"
+    write /proc/perfmgr/boost_ctrl/eas_ctrl/boot_boost "2 100"
+    write /proc/perfmgr/boost_ctrl/eas_ctrl/boot_boost "3 100"
+#Set swappiness
+    write /proc/sys/vm/swappiness 0
+#CPU governor
+    write /sys/devices/system/cpu/cpufreq/policy0/scaling_governor ondemand
+    write /sys/devices/system/cpu/cpufreq/policy6/scaling_governor ondemand
+
 on post-fs
     # Support A/B feature for EMMC and UFS boot region
     wait /dev/block/mmcblk0boot0 2
