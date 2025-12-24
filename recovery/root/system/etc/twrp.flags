@@ -1,21 +1,21 @@
 # Symlinked partitions
-/system_image	emmc		/dev/block/mapper/system							flags=backup=0;flashimg;display="System Image"
-/system_ext_image	emmc		/dev/block/mapper/system_ext							flags=backup=0;flashimg;display="System_ext Image"
-/vendor_image	emmc		/dev/block/mapper/vendor							flags=backup=0;flashimg;display="Vendor Image"
-/product_image	emmc		/dev/block/mapper/product							flags=backup=0;flashimg;display="Product Image"
-/odm_image		emmc		/dev/block/mapper/odm								flags=backup=0;flashimg;display="Odm Image"
+/system_image	emmc		/dev/block/mapper/system							flags=backup=0;display="System Image";flashimg=1
+/system_ext_image	emmc		/dev/block/mapper/system_ext							flags=backup=0;display="System_ext Image";flashimg=1
+/vendor_image	emmc		/dev/block/mapper/vendor							flags=backup=0;display="Vendor Image";flashimg=1
+/product_image	emmc		/dev/block/mapper/product							flags=backup=0;display="Product Image";flashimg=1
+/odm_image		emmc		/dev/block/mapper/odm								flags=backup=0;display="Odm Image";flashimg=1
 
 # Physical partitions - Data
 /optics			ext4		/dev/block/by-name/optics							flags=display="Optics"
 /prism			ext4		/dev/block/by-name/prism							flags=display="Prism"
 /metadata		ext4		/dev/block/platform/bootdevice/by-name/metadata		flags=display="Metadata";wipeingui;wipeduringfactoryreset
-/data			f2fs		/dev/block/by-name/userdata							flags=length=-16384;fileencryption=aes-256-xts:aes-256-cts:v1
+/data			f2fs		/dev/block/by-name/userdata							flags=length=-16384
 /cache          ext4      	/dev/block/platform/bootdevice/by-name/cache      	flags=display="Cache";wipeingui;wipeduringfactoryreset
 
 
 # FOTA
 /dsp			emmc		/dev/block/by-name/dsp
-/dtbo			emmc		/dev/block/by-name/dtbo								flags=backup=1;display="Dtbo"
+/dtbo			emmc		/dev/block/by-name/dtbo								flags=backup=1;display="DTBO"
 /spmfw			emmc		/dev/block/by-name/spmfw
 /scp1			emmc		/dev/block/by-name/scp1
 /sspm_1			emmc		/dev/block/by-name/sspm_1
@@ -43,7 +43,7 @@
 /boot			emmc		/dev/block/by-name/boot								flags=backup=1;display="Boot Image";flashimg=1
 /recovery		emmc		/dev/block/by-name/recovery							flags=backup=1;display="Recovery Image";flashimg=1
 /prism_image	emmc		/dev/block/by-name/prism							flags=backup=1;display="Prism Image";flashimg=1
-/up_param		emmc		/dev/block/by-name/up_param							flags=backup=1;display="Logo";flashimg=1
+/up_param		emmc		/dev/block/by-name/up_param							flags=backup=1;display="up_param";flashimg=1
 
 
 /vbmeta     	   emmc      /dev/block/platform/bootdevice/by-name/vbmeta    		 flags=backup=1;display="Vbmeta";flashimg=1

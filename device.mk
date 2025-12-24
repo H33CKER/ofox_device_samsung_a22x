@@ -18,14 +18,10 @@
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # API
-PRODUCT_TARGET_VNDK_VERSION := 33
-
-PRODUCT_SHIPPING_API_LEVEL := 31
-
-
+PRODUCT_TARGET_VNDK_VERSION := 31
+PRODUCT_SHIPPING_API_LEVEL := 30
 
 # Boot control HAL
-
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.1-impl-recovery \
     android.hardware.boot@1.1-impl \
@@ -42,7 +38,6 @@ PRODUCT_PACKAGES += \
 
 # fastbootd
 PRODUCT_PACKAGES += \
-    android.hardware.fastboot@1.0-impl-mock \
     fastbootd
 
 # health Hal
