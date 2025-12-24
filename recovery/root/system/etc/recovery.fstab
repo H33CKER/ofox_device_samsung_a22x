@@ -62,10 +62,6 @@ odm                                                  /odm          ext4        r
 /dev/block/platform/bootdevice/by-name/gz1	/gz1	emmc	default	recoveryonly
 /dev/block/platform/bootdevice/by-name/optics	/optics	ext4	default	recoveryonly
 /dev/block/platform/bootdevice/by-name/prism	/prism	ext4	default	recoveryonly
-/dev/block/platform/bootdevice/by-name/cam_vpu1	/cam_vpu1	emmc	default	recoveryonly
-/dev/block/platform/bootdevice/by-name/cam_vpu2	/cam_vpu2	emmc	default	recoveryonly
-/dev/block/platform/bootdevice/by-name/cam_vpu3	/cam_vpu3	emmc	default	recoveryonly
-/dev/block/platform/bootdevice/by-name/pi_img	/pi_img	emmc	default	recoveryonly
 /dev/block/platform/bootdevice/by-name/vbmeta_samsung	/vbmeta_samsung	emmc	default	recoveryonly
 /dev/block/by-name/init_boot	/init_boot	emmc	default	recoveryonly
 
