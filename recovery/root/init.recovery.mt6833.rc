@@ -20,7 +20,7 @@ on boot
     setprop ro.boot.vbmeta.avb_version 1.1
     setprop ro.boot.avb_version 1.1
 
-#erayrafet
+#Tweaks
     write /proc/ppm/policy/ut_fix_core_num "4 4"
     write /proc/ppm/policy/ut_fix_freq_idx "0 0"
     write /proc/perfmgr/boost_ctrl/cpu_ctrl/boot_freq "0 0 0 0"
@@ -33,8 +33,8 @@ on boot
 #Set swappiness
     write /proc/sys/vm/swappiness 0
 #CPU governor
-    write /sys/devices/system/cpu/cpufreq/policy0/scaling_governor ondemand
-    write /sys/devices/system/cpu/cpufreq/policy6/scaling_governor ondemand
+    write /sys/devices/system/cpu/cpufreq/policy0/scaling_governor schedutil
+    write /sys/devices/system/cpu/cpufreq/policy6/scaling_governor schedutil
 
 on post-fs
     # Support A/B feature for EMMC and UFS boot region
