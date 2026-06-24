@@ -36,8 +36,8 @@ $(call inherit-product, device/samsung/$(PRODUCT_RELEASE_NAME)/fox_$(PRODUCT_REL
 PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,device/samsung/a22x/recovery/root,recovery/root)
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_NAME := $(PRODUCT_RELEASE_NAME)
-PRODUCT_DEVICE := twrp_$(PRODUCT_RELEASE_NAME)
+PRODUCT_DEVICE := $(PRODUCT_RELEASE_NAME)
+PRODUCT_NAME := twrp_$(PRODUCT_RELEASE_NAME)
 PRODUCT_MODEL := Galaxy A22 5G
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := samsung
