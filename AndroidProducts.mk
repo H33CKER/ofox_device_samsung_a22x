@@ -15,6 +15,7 @@
 #
 
 PRODUCT_MAKEFILES := \
-	$(LOCAL_DIR)/a22x.mk
+	$(LOCAL_DIR)/twrp_a22x.mk
 
-COMMON_LUNCH_CHOICES := a22x-eng
+COMMON_LUNCH_CHOICES := \
+	twrp_a22x-eng

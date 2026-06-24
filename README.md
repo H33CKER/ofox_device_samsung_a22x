@@ -1,1 +1,0 @@
-# twrp_device_samsung_a22-5G

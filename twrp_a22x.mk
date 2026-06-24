@@ -28,20 +28,18 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 $(call inherit-product, vendor/twrp/config/common.mk)
 
 # Inherit device configuration
-$(call inherit-product, device/samsung/a22x/device.mk)
+$(call inherit-product, device/samsung/$(PRODUCT_RELEASE_NAME)/device.mk)
+
+# some OrangeFox-specific settings
+$(call inherit-product, device/samsung/$(PRODUCT_RELEASE_NAME)/fox_$(PRODUCT_RELEASE_NAME).mk)
 
 PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,device/samsung/a22x/recovery/root,recovery/root)
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_NAME := a22x
-PRODUCT_DEVICE := a22x
+PRODUCT_NAME := $(PRODUCT_RELEASE_NAME)
+PRODUCT_DEVICE := twrp_$(PRODUCT_RELEASE_NAME)
 PRODUCT_MODEL := Galaxy A22 5G
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := samsung
 PRODUCT_GMS_CLIENTID_BASE := android-samsung
 
-
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="a22xnsxx-user 13 TP1A.220624.014 A226BXXSBDYA2 release-keys"
-
-BUILD_FINGERPRINT := samsung/a22xnsxx/a22x:12/SP1A.210812.016/A226BXXSBDYA2:user/release-keys
