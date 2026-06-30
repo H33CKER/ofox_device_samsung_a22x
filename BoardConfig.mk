@@ -1,17 +1,5 @@
 #
-# Copyright (C) 2020 The Android Open Source Project
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-# http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
+# Copyright (C) 2026 The Android Open Source Project
 #
 
 DEVICE_PATH := device/samsung/a22x
@@ -63,7 +51,7 @@ TARGET_BOARD_PLATFORM_GPU := mali-g57
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/Image.gz
 TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilt/dtb.img
 BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/dtbo.img
-BOARD_CUSTOM_BOOTIMG_MK := $(DEVICE_PATH)/bootimg.mk
+BOARD_CUSTOM_BOOTIMG_MK := $(DEVICE_PATH)/init/bootimg.mk
 BOARD_INCLUDE_RECOVERY_DTBO := true
 TARGET_KERNEL_ARCH := arm64
 
@@ -151,13 +139,15 @@ BOARD_USES_METADATA_PARTITION := true
 # TWRP specific build flags
 TW_THEME := portrait_hdpi
 TW_EXTRA_LANGUAGES := false
-RECOVERY_SDCARD_ON_DATA := true
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
+RECOVERY_SDCARD_ON_DATA := true
 TW_BRIGHTNESS_PATH := "/sys/class/backlight/panel/brightness"
+
 TW_MAX_BRIGHTNESS := 255
 TW_DEFAULT_BRIGHTNESS := 100
 TW_Y_OFFSET := 50
 TW_H_OFFSET := -50
+
 TW_NO_REBOOT_BOOTLOADER := true
 TW_HAS_DOWNLOAD_MODE := true
 TW_INCLUDE_NTFS_3G := true
@@ -173,7 +163,8 @@ TW_NO_LEGACY_PROPS := true
 TW_NO_BIND_SYSTEM := true
 TW_USE_MODEL_HARDWARE_ID_FOR_DEVICE_ID := true
 TW_INCLUDE_REPACKTOOLS := true
-TWRP_INCLUDE_LOGCAT := true
-TW_DEVICE_VERSION := a22x
+TW_DEVICE_VERSION := SAMSUNG A22 5G
 TW_SKIP_ADDITIONAL_FSTAB := false
 TW_FRAMERATE := 90
+
+TWRP_INCLUDE_LOGCAT := true
